@@ -1,0 +1,115 @@
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-4 text-right">
+			<h3>
+				<span class="glyphicon glyphicon-user"></span> &nbsp;Sign Up
+			</h3>
+		</div>
+		<div class="col-sm-4 text-left">
+			<div class="form-group">
+				<div ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+
+					<form>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="text" name="firstname"
+								class="form-control" ng-model="firstname"
+								placeholder="First name"><br>
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="text" name="lastname" ng-model="lastname"
+								placeholder="Last name" class="form-control">
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="password" name="password" ng-model="password"
+								placeholder="password " class="form-control">
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="password" name="reenterpassword"
+								ng-model="reenterpassword" placeholder="reenter password"
+								class="form-control">
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="text" name="email" ng-model="email"
+								placeholder="email" class="form-control"><br>
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="date" name="bday" ng-model="bday"
+								placeholder="Birthday" class="form-control"><br>
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="text" name="ebayHandle" ng-model="ebayHandle"
+								placeholder="Ebay handle" class="form-control"><br>
+						</div>
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+							<input type="text" name="cellno" ng-model="cellno"
+								placeholder="Cell phone" class="form-control"><br>
+						</div>
+
+            <br>
+            <div style="margin-bottom: 10px; width: 350px">
+
+							<input type="text" name="location" ng-model="location"
+								placeholder='Location' class="form-control"><br>
+						</div>
+						<div style="margin: 10px; width: 350px">
+
+							<input type="button" class="btn btn-primary" value="Register"
+								ng-click="register()"> <input type="button"
+								class="btn btn-default" value="Cancel" ng-click="cancel()">
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+
+		</div>
+    <div class="col-sm-4 text-left">
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_fn">
+        <strong> * First Name </strong>
+      </div>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"   ng-hide="invalid_ln">
+        <strong>* Last Name </strong>
+      </div>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_pwd">
+        <strong>* Password</strong>
+      </div>
+      <div class="alert alert-danger" style="width: 250px;max-height: 40px" align="left"  ng-hide="invalid_rpwd">
+        <strong>* Passwords dont match</strong>
+      </div>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_em">
+        <strong>* Email </strong>
+      </div>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left" ng-hide="invalid_bd">
+        <strong>* Birthday </strong>
+      </div>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left" ng-hide="invalid_ebh">
+        <strong>* Ebay Handle</strong>
+      </div>
+      <br/>
+      <br/>      <br/>
+
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_cph">
+        <strong>* Cell No</strong>
+      </div>
+
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left" ng-hide="invalid_loc">
+        <strong>* Location</strong>
+      </div>
+
+    </div>
+	</div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-6 text-left">
+			<div class="page-header">
+				<h3>Purchases</h3>
+				<span class="glyphicon glyphicon glyphicon-gift gi-500x"
+					style="color: #66aaff;"></span>
+
+			</div>
+			<div ng-mouseover="$ctrl.hoverIn()" ng-mouseleave="$ctrl.hoverOut()">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="item in $ctrl.transactions">
+						<h4>{{item.name}}</h4> <br> Description :
+						{{item.description}}<br> Seller : {{item.seller}}<br>
+						Price : {{item.price}}<br> Quantity : {{item.quantity}}<br>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-sm-0 text-left"></div>
+		<div class="col-sm-6 text-left">
+
+			<div class="page-header">
+				<h3>Bids Won</h3>
+				<span class="glyphicon glyphicon glyphicon-star gi-500x"
+				style="color: #ffad33;"></span>
+			</div>
+			<div ng-mouseover="$ctrl.hoverIn()" ng-mouseleave="$ctrl.hoverOut()">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="item in $ctrl.bids">
+						<h4>{{item.name}}</h4> <br> Description :
+						{{item.description}}<br> Seller : {{item.seller}}<br>
+						Price : {{item.price}}<br> Quantity : {{item.quantity}}<br>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

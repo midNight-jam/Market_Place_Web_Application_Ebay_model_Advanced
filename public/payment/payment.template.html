@@ -1,0 +1,35 @@
+<div class="container-fluid text-center">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6 text-left">
+		<div class="page-header">
+			<h3>
+				Payment <span class="glyphicon glyphicon-credit-card"></span>
+			</h3>
+		</div>
+		<br/>
+		<div class="alert alert-danger" ng-hide="$ctrl.invalid_card">
+			<strong>Incorrect Card Details</strong>
+		</div>
+		<h4>Amount : {{$ctrl.payamount}} </h4>
+		<div ng-mouseover="$ctrl.hoverIn()" ng-mouseleave="$ctrl.hoverOut()">
+			<form>
+				<div style="margin-bottom: 15px">
+					<input type="text" name=nameOnCard class="form-control"
+						placeholder="Name on Card" ng-model="$ctrl.nameOnCard"><br>
+				</div>
+				<div style="margin-bottom: 15px">
+					<input type="text" name="cardnumber" class="form-control"
+						placeholder="Card Number" ng-model="$ctrl.cardNumber">
+				</div>
+				<div style="margin-bottom: 15px">
+					<input class="btn btn-primary" type="button" value="Pay"
+						ng-click="$ctrl.pay()"> <input class="btn btn-default"
+						type="button" value="Cancel" ng-click="$ctrl.cancel()">
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+	<div class="col-sm-3"></div>
+</div>

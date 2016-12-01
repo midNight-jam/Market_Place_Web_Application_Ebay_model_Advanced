@@ -1,0 +1,27 @@
+<div class="container-fluid text-center">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6 text-left">
+		<div class="page-header">
+			<h3>Cart Summary</h3> 
+			
+			<h3>Amount : {{totalAmount}}</h3>
+			<input type="button" class="btn btn-primary"
+				value="Proceed to Checkout" ng-click="$ctrl.cartCheckout()" />
+
+		</div>
+		<div ng-mouseover="$ctrl.hoverIn()" ng-mouseleave="$ctrl.hoverOut()">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="c in cart">
+					<h4>{{c.name}}</h4> <br> {{c.description}}<br>
+					{{c.seller}}<br> {{c.price}}<br> {{c.quantity}} Quantity
+					: <input type="number" ng-model="c.quantity" name="quantity"
+					min="1" max="{{c.quantity}}" value="{{c.quantity}}"
+					ng-change="$ctrl.updateQuantity(c)"> &nbsp;&nbsp; <input
+					type="button" class="btn btn-info" value="Remove"
+					ng-click="$ctrl.removeItem(c)" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-sm-3"></div>
+</div>

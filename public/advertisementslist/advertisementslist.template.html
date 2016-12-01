@@ -1,0 +1,21 @@
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6 text-left">
+
+			<div ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="adv in $ctrl.advertisements">
+						<h4>{{adv.name}}</h4> <br> Description : {{adv.description}}<br>
+						Seller : {{adv.seller}}<br> Price : {{adv.price}}<br>
+						Quantity : {{adv.quantity}}<br> <input type="submit"
+						value="Add to Cart" class="btn btn-success"
+						ng-click="addToCart(adv)">
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+</div>

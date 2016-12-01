@@ -1,0 +1,27 @@
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6 text-left">
+
+			<div ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="adv in $ctrl.bids">
+						<h4>{{adv.name}}</h4> Description - {{adv.description}}<br>
+						Seller - {{adv.seller}}<br> Quantity - {{adv.quantity}}<br>
+						Bid Ends <span class="glyphicon glyphicon-time"></span> -
+						{{adv.enddate.split('T')[0]}} <br> Max Bid - <b>{{adv.bidamount}}$</b>
+						&nbsp;<br> Bidder - <b>{{adv.bidder}}<b> <br>
+								<div style="display: inline">
+									<input type="text" class="form-control" style="width: 250px"
+										ng-model="adv.newbidamount" placeholder="Your Bid $">
+									<input type="submit" value="Bid " class="btn btn-success"
+										ng-click="$ctrl.bid(adv)">
+								</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+</div>

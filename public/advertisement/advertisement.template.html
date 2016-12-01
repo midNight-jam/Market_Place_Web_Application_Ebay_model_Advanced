@@ -1,0 +1,80 @@
+<div class="container-fluid text-right">
+	<div class="row">
+		<div class="col-sm-3">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_nm">
+        <strong> * Item Name </strong>
+      </div>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_dc">
+        <strong> * Description</strong>
+      </div>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_sl">
+        <strong> * Seller </strong>
+      </div>
+      <br/>
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_pr">
+        <strong> * Price </strong>
+      </div>
+      <br/>
+
+      <div class="alert alert-danger" style="width: 200px;max-height: 40px" align="left"  ng-hide="invalid_qn">
+        <strong> * Quantity</strong>
+      </div>
+
+    </div>
+		<div class="col-sm-6 text-left">
+
+			<div class="page-header">
+				<h3>Product Details</h3>
+			</div>
+			<div>
+				<form>
+					<div ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+						<input type="text" name="itemname" style="margin-bottom: 5px; width: 350px; "
+							ng-model="itemname" class="form-control" placeholder="Item Name"><br>
+					</div>
+					<div>
+
+						<textarea ng-model="itemdescription" style="margin-bottom: 20px; width: 350px"
+							class="form-control " placeholder="Description"></textarea>
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Seller"
+							style="margin-bottom: 20px; width: 350px" name="sellerinformation"
+							ng-model="sellerinformation">
+					</div>
+
+					<div class="checkbox">
+						<label><input type="checkbox" value="" ng-model="isBid">I
+							want to sell via Bid</label>
+
+					</div>
+
+					<div ng-hide="isBid">
+						<input type="text" class="form-control" placeholder="Item Price"
+							style="margin-bottom: 20px; width: 350px" name="itemprice" ng-model="itemprice">
+					</div>
+					<div>
+						<input type="number" name="itemquantity" class="form-control"
+							placeholder="Quantity" style="margin-bottom: 20px; width: 350px" required
+							ng-model="itemquantity">
+					</div>
+					<div>
+						<input type="button" class="btn btn-primary" value="Submit"
+							ng-click="submitAd()"> <input type="button"
+							class="btn btn-default" value="Cancel" ng-click="cancelAd()">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-3">
+
+		</div>
+	</div>
+</div>

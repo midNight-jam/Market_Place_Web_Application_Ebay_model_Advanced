@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default" style="height: 40px">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href=""><img src="stylesheets/EBay_logo.png"
+						alt="Ebay" height="20" width="40"> </a></li>
+
+				<li><a href="">Hi <b>{{$ctrl.loggedInUser}}</b>!
+				</a></li>
+				<li><a href="#!/advertisementslist"> <span
+						class="glyphicon glyphicon-sunglasses" style="color: #00aaff"></span>&nbsp;Products
+				</a></li>
+				<li><a href="" ng-click="$ctrl.bids()"> <span
+						class="glyphicon glyphicon-fire" style="color: #ff6666"></span>
+						Bids
+				</a></li>
+				<li><a href="" ng-click="$ctrl.submitAdd()"> <span
+						class="glyphicon glyphicon-usd" style="color: #ffd11a"></span>
+						Sell
+				</a></li>
+				<li><a href="" ng-click="$ctrl.mytransactions()"> <span
+						class="glyphicon glyphicon-transfer" style="color: #99ff33"></span>
+						Transactions
+				</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="" ng-click="$ctrl.profile()"> <span
+						class="glyphicon glyphicon-user" style="color: #660033"></span>
+				</a></li>
+
+				<li><a href="" ng-click="$ctrl.showCart()"><span
+						class="glyphicon glyphicon-shopping-cart gi-500x"
+						style="color: #66aacc;"></span></a></li>
+
+				<!-- ng-hide="{{$ctrl.loggedOut}}"  -->
+				<li><a href="/"><span class="glyphicon glyphicon-log-in"></span>
+						Login</a></li>
+				<!--  ng-show="{{$ctrl.loggedIn}}" -->
+
+
+				<li ng-hide="{{$ctrl.loggedIn}}"><a href=""
+					ng-click="$ctrl.logout()"><span
+						class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+			</ul>
+			</li>
+			</ul>
+		</div>
+</nav>
